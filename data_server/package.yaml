@@ -1,0 +1,26 @@
+descriptor-schema-version: "2.2"
+
+info:
+  name: iox_data_service_socket
+  description: "IOx DevCycle Demo data service"
+  version: "1.0"
+  author-link: ""
+  author-name: "Jock Reed"
+
+app:
+
+  cpuarch: "x86_64"
+  type: docker
+  resources:
+    profile: c1.tiny
+    network:
+      -
+        interface-name: eth0
+        ports:
+          tcp:
+            - 8000
+
+  # Specify runtime and startup
+  startup:
+    rootfs: rootfs.tar
+    target: ["python3 data_service.py"]
