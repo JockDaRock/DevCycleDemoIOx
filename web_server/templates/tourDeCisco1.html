@@ -22,8 +22,8 @@
 				// the socket.io documentation recommends sending an explicit package upon connection
 				// this is specially important when using the global namespace
 				var baseProgress;
-				var socket = io.connect('http://' + document.domain + ':' + '8888' + namespace);
-				var dbsocket = io.connect('http://' + '192.168.194.9' + ':5050/dbdata');
+				var socket = io.connect('http://' + '192.168.195.9' + ':' + '8000' + namespace);
+				var dbsocket = io.connect('http://' + '192.168.195.10' + ':5050/dbdata');
 				dbsocket.on('my response', function(msg) {
 					//console.log(msg.rpm);
 					var json = JSON.parse(msg.jsondata);

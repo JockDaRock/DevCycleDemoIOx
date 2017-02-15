@@ -1,18 +1,20 @@
 descriptor-schema-version: "2.2"
 
 info:
-  name: iox_docker_python_web
-  description: "IOx Docker Python Web Sample Application"
+  name: iox_bike_api_service
+  description: "IOx DevCycle Demo API Service"
   version: "1.0"
-  author-link: "http://www.cisco.com"
-  author-name: "Cisco Systems"
+  author-link: ""
+  author-name: "Jock Reed"
 
 app:
 
   cpuarch: "x86_64"
   type: docker
   resources:
-    profile: c1.small
+    profile: custom
+    cpu: 50
+    memory: 100
     network:
       -
         interface-name: eth0
@@ -23,4 +25,4 @@ app:
   # Specify runtime and startup
   startup:
     rootfs: rootfs.tar
-    target: ["python3 main.py"]
+    target: ["python3 bike_api_service.py"]

@@ -1,8 +1,8 @@
 FROM python:3-alpine
 
-RUN pip install --upgrade pip setuptools wheel
+RUN apk --update add build-base libffi-dev openssl-dev
 
-RUN easy_install -U setuptools
+RUN pip install --upgrade pip setuptools wheel
 
 COPY requirements.txt .
 
@@ -12,4 +12,4 @@ EXPOSE 8000
 
 COPY data_service.py .
 
-CMD python3 data_service.py
+CMD python data_service.py

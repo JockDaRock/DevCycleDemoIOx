@@ -12,7 +12,9 @@ app:
   cpuarch: "x86_64"
   type: docker
   resources:
-    profile: c1.tiny
+    profile: custom
+    cpu: 50
+    memory: 100
     network:
       -
         interface-name: eth0

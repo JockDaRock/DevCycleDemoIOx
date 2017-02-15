@@ -4,56 +4,56 @@ import json
 #import cloudshell.helpers.scripts.cloudshell_scripts_helpers as helper
 import sys
 
-runSpeed = True
-runDistance = True
+runSpeed = False
+runDistance = False
 ReservationID = ''
 
 
-"""def csOutPutWindow(ReservationID, Mess):
-    # Load sensitive server info from file
-    f = open('ServerInfo.txt', 'r')
-    print(ReservationID)
-    input = json.loads(f.read())
-    serverAddress = input['Address']
-    print(serverAddress)
-    serverUser = input['User']
-    print(serverUser)
-    serverPassword = input['Password']
-    print(serverPassword)
-    domain = input['Domain']
-    print(domain)
-
-    # Reservation ID provided by script
-    resId = ReservationID
-    challenge = 'Tropo Call Initiated!'
-
-    # HTML Formatting - top of HTML doc
-    topHTML = """<html>
-    <head>
-    <script></script>
-    </head>
-    <body>
-       <h2 style="color:green;" align="center">
-    """
-    # bike/challenge info to display
-    midHTML = Mess
-
-    # HTML Formatting - bottom of HTML doc
-    botHTML = """</h2>
-    <p></p>
-    <p></p>
-    <p></p>
-    </body>
-    </html>
-    """
-
-    # Inialize CS API Session
-    api_session = helper.CloudShellAPISession(serverAddress, serverUser, serverPassword, domain)
-    message = topHTML + midHTML + botHTML
-    print(message)
-
-    # Execute post to lab output window
-    api_session.WriteMessageToReservationOutput(resId, message)"""
+# def csOutPutWindow(ReservationID, Mess):
+#     # Load sensitive server info from file
+#     f = open('ServerInfo.txt', 'r')
+#     print(ReservationID)
+#     input = json.loads(f.read())
+#     serverAddress = input['Address']
+#     print(serverAddress)
+#     serverUser = input['User']
+#     print(serverUser)
+#     serverPassword = input['Password']
+#     print(serverPassword)
+#     domain = input['Domain']
+#     print(domain)
+#
+#     # Reservation ID provided by script
+#     resId = ReservationID
+#     challenge = 'Tropo Call Initiated!'
+#
+#     # HTML Formatting - top of HTML doc
+#     topHTML = """<html>
+#     <head>
+#     <script></script>
+#     </head>
+#     <body>
+#        <h2 style="color:green;" align="center">
+#     """
+#     # bike/challenge info to display
+#     midHTML = Mess
+#
+#     # HTML Formatting - bottom of HTML doc
+#     botHTML = """</h2>
+#     <p></p>
+#     <p></p>
+#     <p></p>
+#     </body>
+#     </html>
+#     """
+#
+#     # Inialize CS API Session
+#     api_session = helper.CloudShellAPISession(serverAddress, serverUser, serverPassword, domain)
+#     message = topHTML + midHTML + botHTML
+#     print(message)
+#
+#     # Execute post to lab output window
+#     api_session.WriteMessageToReservationOutput(resId, message)
 
 
 def theMagic():

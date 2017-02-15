@@ -49,7 +49,7 @@ thread = None
 def background_thread():
 
     while True:
-        client = MongoClient()
+        client = MongoClient('mongodb://192.168.194.9:27017/database')
 
         db = client.test
 

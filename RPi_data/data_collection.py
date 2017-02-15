@@ -100,7 +100,6 @@ def background_thread():
                     maxSpeed = MPH
                 else:
                     pass
-                socketData(rpm, MPH, cad, dist, maxSpeed)
                 brokerMessage = {"RiderName": riderUserID,
                                  "rpm": rpm,
                                  "cadence": cad,
@@ -193,7 +192,6 @@ def allThingsMadeNew():
 
 
 if __name__ == '__main__':
-    global thread
     if thread is None:
         thread = Thread(target=background_thread)
         thread.daemon = True

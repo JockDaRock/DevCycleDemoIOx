@@ -1,0 +1,21 @@
+{
+  "resources": {
+    "profile": "custom",
+    "cpu": "50",
+    "memory": "100",
+    "network": [
+      {
+        "interface-name": "eth0",
+        "network-name": "iox-bridge0",
+        "mode": "static",
+        "ipv4":{
+          "ip": "192.168.195.9",
+          "prefix": "24",
+          "gateway": "192.168.195.1",
+          "dns": "192.168.195.1",
+          "default": true
+        }
+      }
+    ]
+  }
+}

@@ -1,9 +1,15 @@
 FROM python:3-alpine
 
-RUN pip3 install bottle
+RUN apk --update add build-base libffi-dev openssl-dev
+
+RUN pip install --upgrade pip setuptools wheel
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-COPY main.py /main.py
+COPY mongo_leader_board.py .
 
-CMD python3 /main.py
+CMD python mongo_leader_board.py
