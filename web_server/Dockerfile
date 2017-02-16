@@ -1,15 +1,19 @@
-FROM resin/raspberrypi3-alpine-python
+FROM python:3-alpine
 
-COPY requirements.txt /requirements.txt
+RUN apk --update add build-base libffi-dev openssl-dev
 
-COPY static /static
+RUN pip install --upgrade pip setuptools wheel
 
-COPY templates /templates
+COPY requirements.txt .
+
+COPY static .
+
+COPY templates .
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 80
 
-COPY web_server.py /web_server.py
+COPY web_server.py .
 
-CMD python3 /web_server.py
+CMD python3 web_server.py
