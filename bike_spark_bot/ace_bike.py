@@ -6,8 +6,8 @@ runSpeed = False
 runDistance = False
 ReservationID = ''
 
-token = "Bearer MjE4NzU1NjMtYzQ5OS00NGNlLWE4NTgtZmZiMDczZGE5NDdkZWU1Mzc3YjMtNWZk"
-room = "Y2lzY29zcGFyazovL3VzL1JPT00vODllN2MwYmQtM2U4NC0zZWM0LWJiNTEtNDc1OWY1ZmExMmNi"
+token = "Bearer <token>"
+room = "<room id>"
 
 
 def spark_it(message, bot_token, roomid):
